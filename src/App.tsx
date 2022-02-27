@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {FC} from 'react';
+import {Routes, Route} from "react-router-dom";
+import Step1 from "./pages/Step1";
+import Step2 from './pages/Step2';
+import Step3 from './pages/Step3';
+import Step4 from './pages/Step4';
 
-function App() {
+const App:FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+          <Route path="2" element={<Step2 />} />
+          <Route path="3" element={<Step3 />} />
+          <Route path="4" element={<Step4 />} />
+          <Route path="*" element={<Step1 />} />
+      </Routes>
+    </>
   );
 }
 
