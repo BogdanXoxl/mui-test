@@ -8,7 +8,6 @@ import Page3Slice from "./Page3Slice"
 import Page4Slice from "./Page4Slice";
 
 
-
 const rootReducer = combineReducers({
     one: Page1Slice,
     two: Page2Slice,
